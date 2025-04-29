@@ -6,17 +6,13 @@ import Logout from "./Pages/Logout";
 import TaskManagement from './components/TaskManagement';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Sidebar from './components/Slidebar';
+import Navbar from './components/Navbar';
 
 
 const App = () => {
   const location = useLocation();
   return (
     <>
-    <div className="flex">
-      <Sidebar />
-
-      <div className="flex-1 ml-64 min-h-screen bg-gray-50 p-4">
         <ToastContainer
           position="top-right"
           autoClose={5000}
@@ -28,15 +24,13 @@ const App = () => {
           draggable
           pauseOnHover
         />
-    
+    <Navbar />
       <Routes>
         <Route path="/" element={<LoginPage />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/taskManagement" element={<TaskManagement />} />
         <Route path="/logout" element={<Logout />} />
     </Routes>
-    </div>
-    </div>
     </>
   );
 };
