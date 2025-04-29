@@ -52,7 +52,7 @@ const Signup = () => {
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(values),
               });
-
+ 
               const data = await response.json();
               setLoading(false);
               console.log("Response:", response, "data", data);
