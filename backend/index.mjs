@@ -13,7 +13,7 @@ app.use(
 		origin: [
 			'http://localhost:5174',
 			'http://localhost:5173',
-			'https://fainal-hackton.vercel.app/',
+			'https://fainal-hackton.vercel.app',
 			/\.vercel\.app$/, // Wildcard for all Vercel subdomains
 			/\.up\.railway\.app$/, // Wildcard for all Railway subdomains
 			],
