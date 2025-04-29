@@ -7,7 +7,7 @@ import {
 import { Link, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-const Navbar = ({ onStatusChange }) => {
+const Navbar = ({ onStatusChange = () => {} }) => { 
   const location = useLocation();
   const { isAuthenticated } = useSelector((state) => state.auth);
 
@@ -34,7 +34,7 @@ const Navbar = ({ onStatusChange }) => {
               <Link
                 key={item.to}
                 to={item.to}
-                onClick={() => onStatusChange?.(item.text)}
+                onClick={() => onStatusChange(item.text)}
                 className={`flex items-center px-3 py-2 rounded-md transition duration-300 ${
                   location.pathname === item.to
                     ? "bg-[#F7F7F7] text-black font-semibold"
